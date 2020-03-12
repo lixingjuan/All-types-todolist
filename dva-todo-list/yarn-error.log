@@ -1,0 +1,51 @@
+Arguments: 
+  /Users/lixingjuan/.nvm/versions/node/v13.7.0/bin/node /usr/local/Cellar/yarn/1.19.2/libexec/bin/yarn.js add antd
+
+PATH: 
+  /Users/lixingjuan/Library/Android/sdk/platform-tools:/Users/lixingjuan/Library/Android/sdk/tools:/Users/lixingjuan/.nvm/versions/node/v13.7.0/bin:/Library/Java/JavaVirtualMachines/jdk1.8.0_241.jdk/Contents/Home/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/opt/ncurses/bin:/Users/lixingjuan/Downloads/SoftWare/Maven/apache-maven-3.6.3/bin:.:/usr/local/mysql-8.0.18-macos10.14-x86_64/bin:/Applications/Android Studio.app/Contents/gradle/gradle-6.1.1/bin:/Users/lixingjuan/Library/Android/sdk/platform-tools:/Users/lixingjuan/Library/Android/sdk/tools
+
+Yarn version: 
+  1.19.2
+
+Node version: 
+  13.7.0
+
+Platform: 
+  darwin x64
+
+Trace: 
+  Error: EINVAL: invalid argument, unlink '/Users/lixingjuan/Documents/Git_Projects/All-types-todolist/dva-todo-list/node_modules/babel-eslint/node_modules/@babel/code-frame'
+
+npm manifest: 
+  {
+    "private": true,
+    "scripts": {
+      "start": "roadhog server",
+      "build": "roadhog build",
+      "lint": "eslint --ext .js src test",
+      "precommit": "npm run lint"
+    },
+    "dependencies": {
+      "dva": "^2.4.1",
+      "react": "^16.2.0",
+      "react-dom": "^16.2.0"
+    },
+    "devDependencies": {
+      "babel-plugin-dva-hmr": "^0.3.2",
+      "eslint": "^4.14.0",
+      "eslint-config-umi": "^0.1.1",
+      "eslint-plugin-flowtype": "^2.34.1",
+      "eslint-plugin-import": "^2.6.0",
+      "eslint-plugin-jsx-a11y": "^5.1.1",
+      "eslint-plugin-react": "^7.1.0",
+      "husky": "^0.12.0",
+      "redbox-react": "^1.4.3",
+      "roadhog": "^2.5.0-beta.4"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
