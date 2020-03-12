@@ -1,5 +1,5 @@
 Arguments: 
-  /Users/lixingjuan/.nvm/versions/node/v13.7.0/bin/node /usr/local/Cellar/yarn/1.19.2/libexec/bin/yarn.js add antd
+  /Users/lixingjuan/.nvm/versions/node/v13.7.0/bin/node /usr/local/Cellar/yarn/1.19.2/libexec/bin/yarn.js add babel-eslint
 
 PATH: 
   /Users/lixingjuan/Library/Android/sdk/platform-tools:/Users/lixingjuan/Library/Android/sdk/tools:/Users/lixingjuan/.nvm/versions/node/v13.7.0/bin:/Library/Java/JavaVirtualMachines/jdk1.8.0_241.jdk/Contents/Home/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/opt/ncurses/bin:/Users/lixingjuan/Downloads/SoftWare/Maven/apache-maven-3.6.3/bin:.:/usr/local/mysql-8.0.18-macos10.14-x86_64/bin:/Applications/Android Studio.app/Contents/gradle/gradle-6.1.1/bin:/Users/lixingjuan/Library/Android/sdk/platform-tools:/Users/lixingjuan/Library/Android/sdk/tools
@@ -14,7 +14,7 @@ Platform:
   darwin x64
 
 Trace: 
-  Error: EINVAL: invalid argument, unlink '/Users/lixingjuan/Documents/Git_Projects/All-types-todolist/dva-todo-list/node_modules/babel-eslint/node_modules/@babel/code-frame'
+  Error: ENOENT: no such file or directory, copyfile '/Users/lixingjuan/Library/Caches/Yarn/v6/npm-regenerator-runtime-0.11.1-be05ad7f9bf7d22e056f9726cee5017fbf19e2e9-integrity/node_modules/regenerator-runtime/README.md' -> '/Users/lixingjuan/Documents/Git_Projects/All-types-todolist/dva-todo-list/node_modules/dva/node_modules/regenerator-runtime/README.md'
 
 npm manifest: 
   {
@@ -28,7 +28,9 @@ npm manifest:
     "dependencies": {
       "dva": "^2.4.1",
       "react": "^16.2.0",
-      "react-dom": "^16.2.0"
+      "react-dom": "^16.2.0",
+      "antd": "^3.22.1",
+      "uuid": "^3.4.0"
     },
     "devDependencies": {
       "babel-plugin-dva-hmr": "^0.3.2",

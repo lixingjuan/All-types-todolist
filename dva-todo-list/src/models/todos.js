@@ -8,9 +8,16 @@ export default {
     delete(state, { payload: id }) {
       return state.filter(item => item.id !== id);
     },
-    addTodo(state, { payload: id }) {
-      console.log(arguments);
-      return [...state];
+    addTodo(state, { payload: todo }) {
+      // 这里打印arguments,
+      // 参数1是这个models 的 state
+      // 参数2是，
+      /* {
+        type: '/todos/addTodo',
+        payload:1
+      } */
+      console.log("models里的reducers里打印的arguments", arguments);
+      return [...state, todo];
     }
   }
 };
