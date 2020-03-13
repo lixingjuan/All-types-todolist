@@ -8,7 +8,9 @@ import React, { Component } from "react";
 import uuid from "uuid";
 import { connect } from "react-redux";
 
-import TodoItems from "./components/index";
+import TodoItems from "./todo";
+import FancyButton from "./fakeTodo";
+
 import { addTodo, initTodos, turnTodo, deleteTodo } from "../../reducers/todoReducer";
 
 class TodoListRedux extends Component {
@@ -23,8 +25,11 @@ class TodoListRedux extends Component {
     ]
   };
 
+  myRef = React.createRef();
+  reactRef = React.createRef();
+  fancyButtonRef = React.createRef();
+
   componentDidMount() {
-    console.log(this);
     // 触发初始化todos列表
     this.props.toInitTodos([
       {
@@ -33,6 +38,12 @@ class TodoListRedux extends Component {
         checked: false
       }
     ]);
+
+    console.log("原生DOM元素的ref", this.myRef.current);
+    console.log("子组件的ref", this.reactRef.current);
+
+    // 你可以直接获取 DOM button 的 ref：
+    console.log("子组件refs转发", this.fancyButtonRef.current);
   }
 
   handleAddTodo = () => {
@@ -74,6 +85,8 @@ class TodoListRedux extends Component {
 
     return (
       <div id="warpper">
+        <div ref={this.myRef}>demo </div>
+        <FancyButton ref={this.fancyButtonRef}>Click me!</FancyButton>;
         <input
           value={this.state.inputData}
           onKeyDown={e => {
@@ -88,7 +101,7 @@ class TodoListRedux extends Component {
         <button onClick={this.handleAddTodo}>添加</button>
         <div>
           <p>未完成的</p>
-          <TodoItems {...false_todoItemsProps} />
+          <TodoItems {...false_todoItemsProps} ref={this.reactRef} />
         </div>
         <div>
           <p>已完成的</p>
