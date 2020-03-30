@@ -2,12 +2,12 @@ import React from "react";
 import { BrowserRouter as Router, Route, Switch /* Redirect */ } from "react-router-dom";
 import { createStore } from "redux";
 import { Provider } from "react-redux";
+import "antd/dist/antd.css";
 
 import "./App.css";
 import index from "./routes/index";
 import TodoList from "./routes/TodoList/index";
 import TodoListRedux from "./routes/TodoListRedux/index";
-
 import todosReducer from "./reducers/todoReducer";
 
 const store = createStore(todosReducer);

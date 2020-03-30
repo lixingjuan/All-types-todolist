@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import uuid from "uuid";
+import { DatePicker } from "antd";
 
 import TodoItems from "./components/index";
 import "./index.css";
@@ -44,6 +45,10 @@ export default class TodoList extends Component {
     });
   };
 
+  onChange(date, dateString) {
+    console.log(date, dateString);
+  }
+
   render() {
     const todoItemsProps = {
       itemsProps: this.state.items,
@@ -52,6 +57,16 @@ export default class TodoList extends Component {
 
     return (
       <div id="warpper">
+        <div>
+          <DatePicker />
+          <br />
+          <DatePicker picker="week" />
+          <br />
+          <DatePicker picker="month" />
+          <br />
+          <DatePicker picker="year" />
+        </div>
+        ,
         <input
           value={this.state.inputData}
           onKeyDown={e => {
